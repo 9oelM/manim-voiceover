@@ -24,19 +24,16 @@ class ElevenLabsExample(VoiceoverScene):
         # Comprehensive example with all available options
         self.set_speech_service(
             ElevenLabsService(
-                voice_name="Adam",
+                voice_name="Joel", # change as needed. Example: "Glinda", "Sam", etc
                 model="eleven_multilingual_v2",  # or "eleven_flash_v2_5", "eleven_turbo_v2_5"
                 voice_settings=VoiceSettings(
-                    stability=0.001, 
+                    stability=0.5, 
                     similarity_boost=0.25,
                     style=0.0,
                     use_speaker_boost=True
                 ),
                 output_format="mp3_44100_128",  # High quality format
                 enable_logging=True,  # Enable for history features
-                optimize_streaming_latency=1,  # Some latency optimization
-                language_code="en",  # Enforce English (for supported models)
-                apply_text_normalization="auto",  # Auto text normalization
             )
         )
         

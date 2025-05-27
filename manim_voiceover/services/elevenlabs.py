@@ -136,6 +136,11 @@ class ElevenLabsService(SpeechService):
                 self.voice_name = available_voices[0].name
             else:
                 raise Exception("No voices available from ElevenLabs API.")
+            
+        # validate language_code
+        if language_code:
+            if model not in ["eleven_turbo_v2_5", "eleven_flash_v2_5"]:
+                raise Exception(f"Language code {language_code} is not supported for model {model}. Needs model to be one of ['eleven_turbo_v2_5', 'eleven_flash_v2_5']")
 
         self.model = model
         
