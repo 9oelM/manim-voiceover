@@ -41,8 +41,8 @@ manim_translate = 'manim_voiceover.translate.translate:main'
 manim_render_translation = 'manim_voiceover.translate.render:main'
 
 [tool.poetry.dependencies]
-python = ">=3.8,<4"
-manim = "*"
+python = "==3.11.6"
+manim = "==0.19.0"
 sox = "^1.4.1"
 python-dotenv = "^0.21.0"
 mutagen = "^1.46.0"
@@ -61,7 +61,7 @@ pip = ">=21.0.1"
 openai-whisper = { version = "^20230314", optional = true }
 stable-ts = { version ="^2.6.2", optional = true }
 python-slugify = "^8.0.1"
-elevenlabs = {version = "^2.1.0", optional = true}
+elevenlabs = "^2.1.0"
 
 [tool.poetry.extras]
 azure = ["azure-cognitiveservices-speech"]
