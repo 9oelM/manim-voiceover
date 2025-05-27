@@ -8,7 +8,7 @@ class ElevenLabsExample(VoiceoverScene):
     def construct(self):
         # Set speech service using defaults, without voice_name or voice_id
         # If none of voice_name or voice_id is passed, it defaults to the
-        # first voice in the list returned by `voices()`
+        # first voice in the list returned by the ElevenLabs API
         #
         # self.set_speech_service(ElevenLabsService())
         #
